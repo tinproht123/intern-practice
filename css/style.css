@@ -1,0 +1,60 @@
+﻿@import "normalize.css";
+
+:root{
+    --dark-color: #343a40;
+    --success-color: #28a745;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+#header{
+    width:100%;
+    background: var(--dark-color);
+}
+
+.navbar ul{
+    display: flex;
+    align-items: center;
+}
+
+.navbar li{
+    padding: 20px 30px;
+}
+
+.navbar a{
+    color: #fff;
+    font-weight: 600;
+
+}
+
+.navbar li:hover{
+    background: lightgrey;
+}
+
+.navbar li:hover a{
+    color: var(--dark-color);
+}
+
+.navbar .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}

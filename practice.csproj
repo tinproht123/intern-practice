@@ -166,28 +166,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bootstrap\Content\bootstrap-grid.css" />
-    <Content Include="bootstrap\Content\bootstrap-grid.min.css" />
-    <Content Include="bootstrap\Content\bootstrap-grid.rtl.css" />
-    <Content Include="bootstrap\Content\bootstrap-grid.rtl.min.css" />
-    <Content Include="bootstrap\Content\bootstrap-reboot.css" />
-    <Content Include="bootstrap\Content\bootstrap-reboot.min.css" />
-    <Content Include="bootstrap\Content\bootstrap-reboot.rtl.css" />
-    <Content Include="bootstrap\Content\bootstrap-reboot.rtl.min.css" />
-    <Content Include="bootstrap\Content\bootstrap-utilities.css" />
-    <Content Include="bootstrap\Content\bootstrap-utilities.min.css" />
-    <Content Include="bootstrap\Content\bootstrap-utilities.rtl.css" />
-    <Content Include="bootstrap\Content\bootstrap-utilities.rtl.min.css" />
-    <Content Include="bootstrap\Content\bootstrap.css" />
-    <Content Include="bootstrap\Content\bootstrap.min.css" />
-    <Content Include="bootstrap\Content\bootstrap.rtl.css" />
-    <Content Include="bootstrap\Content\bootstrap.rtl.min.css" />
-    <Content Include="bootstrap\Scripts\bootstrap.bundle.js" />
-    <Content Include="bootstrap\Scripts\bootstrap.bundle.min.js" />
-    <Content Include="bootstrap\Scripts\bootstrap.esm.js" />
-    <Content Include="bootstrap\Scripts\bootstrap.esm.min.js" />
-    <Content Include="bootstrap\Scripts\bootstrap.js" />
-    <Content Include="bootstrap\Scripts\bootstrap.min.js" />
+    <Content Include="css\normalize.css" />
+    <Content Include="css\style.css" />
     <Content Include="fontawesome\Content\font-awesome.css" />
     <Content Include="fontawesome\Content\font-awesome.min.css" />
     <Content Include="fontawesome\fonts\fontawesome-webfont.svg" />
@@ -196,7 +176,6 @@
     <Content Include="fontawesome\fonts\fontawesome-webfont.woff" />
     <Content Include="fontawesome\fonts\fontawesome-webfont.ttf" />
     <Content Include="fontawesome\fonts\fontawesome-webfont.eot" />
-    <Content Include="data\data.json" />
     <None Include="jquery\Scripts\jquery-3.6.1.intellisense.js" />
     <Content Include="jquery\Scripts\jquery-3.6.1.js" />
     <Content Include="jquery\Scripts\jquery-3.6.1.min.js" />
@@ -210,7 +189,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Masterpages\MainForm.Master.cs">
       <DependentUpon>MainForm.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -243,31 +221,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Masterpages\MainForm.Master" />
-    <Content Include="bootstrap\Content\bootstrap.rtl.min.css.map" />
-    <Content Include="bootstrap\Content\bootstrap.rtl.css.map" />
-    <Content Include="bootstrap\Content\bootstrap.min.css.map" />
-    <Content Include="bootstrap\Content\bootstrap.css.map" />
-    <Content Include="bootstrap\Content\bootstrap-utilities.rtl.min.css.map" />
-    <Content Include="bootstrap\Content\bootstrap-utilities.rtl.css.map" />
-    <Content Include="bootstrap\Content\bootstrap-utilities.min.css.map" />
-    <Content Include="bootstrap\Content\bootstrap-utilities.css.map" />
-    <Content Include="bootstrap\Content\bootstrap-reboot.rtl.min.css.map" />
-    <Content Include="bootstrap\Content\bootstrap-reboot.rtl.css.map" />
-    <Content Include="bootstrap\Content\bootstrap-reboot.min.css.map" />
-    <Content Include="bootstrap\Content\bootstrap-reboot.css.map" />
-    <Content Include="bootstrap\Content\bootstrap-grid.rtl.min.css.map" />
-    <Content Include="bootstrap\Content\bootstrap-grid.rtl.css.map" />
-    <Content Include="bootstrap\Content\bootstrap-grid.min.css.map" />
-    <Content Include="bootstrap\Content\bootstrap-grid.css.map" />
     <Content Include="libmongocrypt.so" />
     <Content Include="libmongocrypt.dylib" />
     <None Include="packages.config" />
-    <Content Include="bootstrap\Scripts\bootstrap.min.js.map" />
-    <Content Include="bootstrap\Scripts\bootstrap.js.map" />
-    <Content Include="bootstrap\Scripts\bootstrap.esm.min.js.map" />
-    <Content Include="bootstrap\Scripts\bootstrap.esm.js.map" />
-    <Content Include="bootstrap\Scripts\bootstrap.bundle.min.js.map" />
-    <Content Include="bootstrap\Scripts\bootstrap.bundle.js.map" />
     <Content Include="jquery\Scripts\jquery-3.6.1.slim.min.map" />
     <Content Include="jquery\Scripts\jquery-3.6.1.min.map" />
     <None Include="Web.Debug.config">
@@ -278,7 +234,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="css\" />
     <Folder Include="mongodb\" />
   </ItemGroup>
   <PropertyGroup>
