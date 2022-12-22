@@ -6,14 +6,17 @@
 <head runat="server">
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+    <!-- jQuery and Javascript -->
     <script type="text/javascript" src="../jquery/Scripts/jquery-3.6.1.min.js"></script>
     <script type="text/javascript" src="../js/app.js"></script>
+    <script type="text/javascript" src="../jquery/Scripts/jquery-ui-1.13.2.min.js"></script>
+
+    <!-- Fontawesome -->
     <link rel="stylesheet" href="~/fontawesome/Content/font-awesome.min.css" />
 
     <!-- Css -->
     <link rel="stylesheet" href="../css/style.css" />
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../jquery/Content/themes/base/jquery-ui.css" />
 </head>
 <body>
     <header id="header">
@@ -21,23 +24,12 @@
             <ul>
                 <li><a href="MainPage.aspx">Trang chủ</a></li>
                 <li><a href="List.aspx">Danh sách</a></li>
-                <li>
-                    <div class="dropdown">
-                        <button class="dropbtn">
-                            Chức năng
-                            <i class="fa-solid fa-caret-down"></i>
-                        </button>
-                        <div class="dropdown-content">
-                            <a href="#">Link 1</a>
-                            <a href="#">Link 2</a>
-                            <a href="#">Link 3</a>
-                        </div>
-                    </div>
-                </li>
+                <li><a href="Info.aspx">Thông tin</a></li>
+                <li><a href="Contact.aspx">Liên hệ</a></li>
             </ul>
         </nav>
     </header>
-    <section id="main" class="container mt-3" style="margin-bottom: 100px">
+    <section id="main" style="margin-bottom: 100px">
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
     </section>

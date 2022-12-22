@@ -1,4 +1,6 @@
 ﻿@import "normalize.css";
+@import "typography.css";
+@import "flex.css";
 
 :root{
     --dark-color: #343a40;
@@ -9,6 +11,10 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
+}
+
+.w-100{
+    width: 100%;
 }
 
 ul{
@@ -32,6 +38,7 @@ a{
 
 .navbar li{
     padding: 20px 30px;
+    cursor:pointer;
 }
 
 .navbar a{
@@ -48,13 +55,56 @@ a{
     color: var(--dark-color);
 }
 
-.navbar .dropbtn {
-    font-size: 16px;
-    border: none;
+.form{
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.5) -5px 5px;
+    width: 100%;
+    max-width: 800px !important;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+
+.form-control{
+    display: flex;
+    width: 98%;
+    padding-inline: 10px;
+    margin-bottom: 20px;
+}
+
+
+.form-control .form-text {
+    width: 73%;
+}
+
+.form-control .form-text input{
+    width: 100%;
+}
+
+.form-control .form-label-text{
+    width: 25%;
+}
+
+.rdio-btn{
+    margin-left: 20px;
+}
+
+.btn{
+    margin: 0 10px;
+    padding: 8px 12px;
+    border:none;
     outline: none;
     color: white;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.btn-clear {
+    background: #DC3545;
+}
+
+.btn-submit {
+    background: #198754;
 }

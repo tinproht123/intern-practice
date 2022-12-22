@@ -137,4 +137,6 @@ $(function () {
     $("body").tooltip({ selector: '[data-bs-toggle=tooltip]' });
 
     $(".btn-add").click(addData());
+
+    $("#dpkStudentDob").datepicker();
 });

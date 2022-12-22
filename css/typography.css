@@ -1,0 +1,23 @@
+﻿.text-dark{
+    color: #212529;
+}
+
+.text-primary{
+    color: #0D6EDF;
+}
+
+.text-white{
+    color: #fff;
+}
+
+.text-success{
+    color: #198754;
+}
+
+.text-danger{
+    color: #DC3545;
+}
+
+.fw-bold{
+    font-weight: bold;
+}
