@@ -13,7 +13,7 @@
         id: 2,
         name: "Đào Nguyên Đạt",
         email: "dat123@gmail.com",
-        dob: "23/2/2001",
+        dob: "23/02/2001",
         city: "Hà Nội",
         major: "Lập Trình Web",
         skills: ["Java", "C#", "Python"],
@@ -23,7 +23,7 @@
         id: 3,
         name: "Lê Minh Tâm",
         email: "mhtam123@gmail.com",
-        dob: "13/1/2001",
+        dob: "13/01/2001",
         city: "TP.Hồ Chí Minh",
         major: "Lập Trình App Mobile",
         skills: ["C#", "Flutter"],
@@ -33,7 +33,7 @@
         id: 4,
         name: "Phạm Quang Nam",
         email: "quangnam123@gmail.com",
-        dob: "26/8/2002",
+        dob: "26/08/2002",
         city: "Hà Nội",
         major: "Lập Trình Phần Mềm",
         skills: ["Database", "C#"],
@@ -43,7 +43,7 @@
         id: 5,
         name: "Đinh Văn Dũng",
         email: "vdung123@gmail.com",
-        dob: "15/5/2002",
+        dob: "15/05/2002",
         city: "Hà Nội",
         major: "Lập Trình Phần Mềm",
         skills: ["Database", "C#", "Java", "Spring Boot"],
@@ -77,15 +77,22 @@ function loadList() {
     $.map(data, function (value, key) {
         let tr = `
     <tr id="item-${value.id}">
-        <th scope = "row" class="index"></th>
+        <td><input type="checkbox" name="chkItem" /></td>
+        <td scope = "row" class="index"></td>
         <td>${value.name}</td>
         <td>${value.email}</td>
         <td>${value.dob}</td>
         <td>${value.city}</td>
         <td>${value.major}</td>
         <td>
-            <button type="button" data-target="${value.id}" class="btn btn-delete" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa-solid fa-trash text-danger" data-bs-toggle="tooltip" data-bs-title="Xóa"></i></button>
-            <button type="button" class="btn btn-edit"><i class="fa-solid fa-pen-to-square text-success"  data-bs-toggle="tooltip" data-bs-title="Sửa"></i></button>
+            <button type="button" data-target="${value.id}" class="btn btn-delete tooltip">
+                <i class="fa-solid fa-trash text-danger"></i>
+                <span class='tooltip-text'>Xoá</span>
+            </button>
+            <button type="button" class="btn btn-edit tooltip">
+                <i class="fa-solid fa-pen-to-square text-success"></i>
+                <span class='tooltip-text'>Sửa</span>
+            </button>
         </td>
     </tr>
     `;
@@ -139,4 +146,18 @@ $(function () {
     $(".btn-add").click(addData());
 
     $("#dpkStudentDob").datepicker();
+
+    $("#add-form-overlay").click(function () {
+        $("#add-form-modal").css("display", "none")
+    })
+
+    $(".btn-add").click(function (e) {
+        e.preventDefault()
+        $("#add-form-modal").css("display", "block")
+    })
+
+    $(".btn-cancel").click(function (e) {
+        e.preventDefault()
+        $("#add-form-modal").css("display", "none")
+    })
 });
