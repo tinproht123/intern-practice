@@ -1,23 +1,23 @@
 ﻿.text-dark{
-    color: #212529;
+    color: #212529 !important;
 }
 
 .text-primary{
-    color: #0D6EDF;
+    color: #0D6EDF !important;
 }
 
 .text-white{
-    color: #fff;
+    color: #fff !important;
 }
 
 .text-success{
-    color: #198754;
+    color: #198754 !important; 
 }
 
 .text-danger{
-    color: #DC3545;
+    color: #DC3545 !important;
 }
 
 .fw-bold{
-    font-weight: bold;
+    font-weight: bold !important;
 }

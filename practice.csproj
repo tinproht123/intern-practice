@@ -228,7 +228,6 @@
     <Content Include="jquery\Scripts\jquery-ui-1.13.2.min.js" />
     <Content Include="js\app.js" />
     <Content Include="mongocrypt.dll" />
-    <Content Include="Pages\AddForm.aspx" />
     <Content Include="Pages\Info.aspx" />
     <Content Include="Pages\List.aspx" />
     <Content Include="Pages\MainPage.aspx" />
@@ -242,13 +241,6 @@
     </Compile>
     <Compile Include="Masterpages\MainForm.Master.designer.cs">
       <DependentUpon>MainForm.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\AddForm.aspx.cs">
-      <DependentUpon>AddForm.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\AddForm.aspx.designer.cs">
-      <DependentUpon>AddForm.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Info.aspx.cs">
       <DependentUpon>Info.aspx</DependentUpon>

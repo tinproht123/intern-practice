@@ -2,8 +2,8 @@
 @import "typography.css";
 @import "flex.css";
 
-:root{
-    --dark-color: #343a40;
+:root {
+    --dark-color: #212529;
     --success-color: #28a745;
 }
 
@@ -60,11 +60,16 @@ a{
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.5) -5px 5px;
     width: 100%;
-    max-width: 800px !important;
-    margin: 20px auto;
+    max-width: 1000px !important;
     padding: 20px;
+    z-index:9999;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 40px;
 }
-
 
 .form-control{
     display: flex;
@@ -99,6 +104,7 @@ a{
     font-weight: bold;
     border-radius: 5px;
     margin-top: 20px;
+    background: inherit;
 }
 
 .btn-clear {
@@ -107,4 +113,104 @@ a{
 
 .btn-submit {
     background: #198754;
+}
+
+.btn-add{
+    background: #198754;
+    margin-bottom: 30px;
+}
+
+.btn-cancel{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    font-weight: 900;
+}
+
+.modal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display:none;
+    z-index: 3;
+}
+
+.modal-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 4;
+    height:9999px;
+}
+
+.tooltip{
+    position: relative;
+}
+
+.tooltip-text {
+    position: absolute;
+    z-index: 10;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    font-weight: normal;
+
+}
+
+.tooltip:hover .tooltip-text{
+    visibility: visible;
+}
+
+table, td, th {
+    border: 1px solid black;
+    margin-inline: auto;
+}
+
+.table{
+    display: table;
+    border-spacing: 2px;
+    border-collapse: collapse;
+    width: 100%;
+    max-width:1300px;
+    padding: 5px;
+    margin-inline: auto;
+    font-size:12px;
+}
+
+thead{
+    background: var(--dark-color);
+    color: #fff;
+}
+
+th, td{
+    vertical-align: middle;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+td .btn{
+    margin:0;
+}
+
+.btn-cancel{
+    position: absolute !important;
+}
+
+.skill-container{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
