@@ -62,13 +62,14 @@ a{
     width: 100%;
     max-width: 1000px !important;
     padding: 20px;
-    z-index:9999;
     background: #fff;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     margin-top: 40px;
+    z-index: 9999 !important;
+    display: none;
 }
 
 .form-control{
@@ -118,6 +119,14 @@ a{
 .btn-add{
     background: #198754;
     margin-bottom: 30px;
+    display: inline;
+    margin-left: 20px;
+}
+
+.btn-remove-all {
+    display: inline;
+    background: #b80000;
+    margin-left: 5px;
 }
 
 .btn-cancel{
@@ -146,7 +155,7 @@ a{
     bottom: 0;
     background: rgba(0, 0, 0, 0.6);
     z-index: 4;
-    height:9999px;
+    height:999px;
 }
 
 .tooltip{
@@ -213,4 +222,40 @@ td .btn{
     display: grid;
     grid-gap: 10px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.modal-confirm-remove{
+    display: none;
+    background: #fff;
+    padding: 20px;
+    z-index: 9999 !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+}
+
+.modal-confirm-remove .btn-return {
+    background: #615e56;
+}
+
+.btn-confirm-remove {
+    background: #b80000;
+}
+
+footer {
+    clear: both;
+    position: relative;
+    height: 100px;
+    margin-top: -200px;
+    width: 100%;
+    background: var(--dark-color);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 5px;
 }

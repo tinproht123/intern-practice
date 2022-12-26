@@ -11,7 +11,7 @@ namespace practice.Pages
 {
 
 
-    public partial class WebForm2
+    public partial class Contact
     {
     }
 }

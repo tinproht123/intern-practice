@@ -4,8 +4,9 @@
     <title>Danh sách</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h2>Danh sách sinh viên</h2>
+    <h2 style="margin: 20px">Danh sách sinh viên</h2>
     <button class="btn btn-add">Thêm thông tin</button>
+    <button class="btn btn-remove-all">Xóa</button>
     <table class="table">
         <thead>
             <tr>
@@ -29,8 +30,7 @@
     </table>
 
 
-    <div class="modal" id="add-form-modal">
-        <div class="modal-overlay" id="add-form-overlay"></div>
+    <div class="modal">
         <form>
             <div class="form">
                 <button class="btn btn-cancel text-danger tooltip">
@@ -166,5 +166,14 @@
                 </div>
             </div>
         </form>
+        <div class="modal-confirm-remove">
+            <h3 style="margin: 20px 0">Bạn có chắc muốn xóa thông tin này chứ?</h3>
+            <div class="d-flex flex-row jc-end">
+                <button class="btn btn-return">Quay lại</button>
+                <button class="btn btn-confirm-remove">Xóa</button>
+            </div>
+        </div>
+        <div class="modal-overlay" id="add-form-overlay"></div>
     </div>
+
 </asp:Content>

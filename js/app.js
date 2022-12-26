@@ -87,16 +87,14 @@ function updateIndex() {
     }
 }
 
-function addData() {
-    let name = $("#name").val()
-    let email = $("#email").val()
-    let dob = $("#dob").val()
-    let city = $("#city").find(":selected").val()
-    let major = $("input[name=major]:checked").val()
-
-    console.log(name, email, dob, city, major)
+function resetData() {
+    $('input[type="text"]').val("")
+    $('input[type="email"').val("")
+    $('textarea').val("")
+    $('input[type="radio"').prop("checked", false)
+    $('input[type="checkbox"').prop("checked", false)
+    $('select option[value="Công nghệ thông tin"]').prop("selected", true)
 }
-
 
 // Load data lên danh sách
 function loadList() {
@@ -159,11 +157,6 @@ function loadList() {
 $(function () {
     loadList()
 
-    $(".btn-delete").click(function () {
-        id = Number($(this).data("target"))
-        console.log(id)
-    });
-
     $(".btn-delete-verify").click(function () {
         let index = data.findIndex(item => item.id === id)
         if (index !== null) {
@@ -175,22 +168,25 @@ $(function () {
 
     $("body").tooltip({ selector: '[data-bs-toggle=tooltip]' });
 
-    $(".btn-add").click(addData());
-
     $("#dpkStudentDob").datepicker();
 
-    $("#add-form-overlay").click(function () {
-        $("#add-form-modal").css("display", "none")
+    $(".modal-overlay").click(function () {
+        $(".modal").css("display", "none")
+        $(".form").css("display", "none")
+        $(".modal-confirm-remove").css("display", "none")
     })
 
     $(".btn-add").click(function (e) {
         e.preventDefault()
-        $("#add-form-modal").css("display", "block")
+        $(".modal").css("display", "block")
+        $(".form").css("display", "block")
     })
 
     $(".btn-cancel").click(function (e) {
         e.preventDefault()
-        $("#add-form-modal").css("display", "none")
+        $(".modal").css("display", "none")
+        $(".form").css("display", "none")
+        $(".modal-confirm-remove").css("display", "none")
     })
 
     $("#chkAllBox").click(function () {
@@ -258,7 +254,9 @@ $(function () {
             skills
             })
         updateIndex();
-        $("#add-form-modal").css("display", "none")
+        $(".modal").css("display", "none")
+        $(".form").css("display", "none")
+        resetData()
     })
 
     $('#chkAllBox').click(function () {
@@ -271,11 +269,31 @@ $(function () {
 
     $('.btn-clear').click(function (e) {
         e.preventDefault()
-        $('input[type="text"]').val("")
-        $('input[type="email"').val("")
-        $('textarea').val("")
-        $('input[type="radio"').prop("checked", false)
-        $('input[type="checkbox"').prop("checked", false)
-        $('select option[value="Công nghệ thông tin"]').prop("selected", true)
+        resetData()
+    })
+
+    $(".btn-delete").click(function () {
+        id = Number($(this).data("target"))
+        $(".modal").css("display", "block")
+        $(".modal-confirm-remove").css("display", "block")
+    })
+
+    $(".btn-return").click(function (e) {
+        e.preventDefault()
+        $(".modal").css("display", "none")
+        $(".form").css("display", "none")
+        $(".modal-confirm-remove").css("display", "none")
+    })
+
+    $(".btn-confirm-remove").click(function () {
+        $('#item-' + id).remove()
+        $(".modal").css("display", "none")
+        $(".form").css("display", "none")
+        $(".modal-confirm-remove").css("display", "none")
+    })
+
+    $(".btn-remove-all").click(function () {
+        $("input[name='chkItem']:checked").parents('tr').remove()
+        $('#chkAllBox').prop("checked", false)
     })
 });

@@ -228,10 +228,10 @@
     <Content Include="jquery\Scripts\jquery-ui-1.13.2.min.js" />
     <Content Include="js\app.js" />
     <Content Include="mongocrypt.dll" />
+    <Content Include="Pages\Contact.aspx" />
     <Content Include="Pages\Info.aspx" />
     <Content Include="Pages\List.aspx" />
     <Content Include="Pages\MainPage.aspx" />
-    <Content Include="Pages\WebForm2.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -241,6 +241,13 @@
     </Compile>
     <Compile Include="Masterpages\MainForm.Master.designer.cs">
       <DependentUpon>MainForm.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Info.aspx.cs">
       <DependentUpon>Info.aspx</DependentUpon>
@@ -262,13 +269,6 @@
     </Compile>
     <Compile Include="Pages\MainPage.aspx.designer.cs">
       <DependentUpon>MainPage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\WebForm2.aspx.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\WebForm2.aspx.designer.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -29,7 +29,7 @@
             </ul>
         </nav>
     </header>
-    <section id="main" style="margin-bottom: 100px">
+    <section id="main" style="margin-bottom: 300px; min-height: 100%">
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
     </section>
