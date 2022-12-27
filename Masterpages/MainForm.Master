@@ -24,12 +24,13 @@
             <ul>
                 <li><a href="MainPage.aspx">Trang chủ</a></li>
                 <li><a href="List.aspx">Danh sách</a></li>
+                <li><a href="Search.aspx">Tìm kiếm</a></li>
                 <li><a href="Info.aspx">Thông tin</a></li>
                 <li><a href="Contact.aspx">Liên hệ</a></li>
             </ul>
         </nav>
     </header>
-    <section id="main" style="margin-bottom: 300px; min-height: 100%">
+    <section id="main" style="margin-bottom: 300px; min-height: 100%; max-width: 1300px; margin-inline: auto; width: 95%; margin-top: 30px">
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
     </section>

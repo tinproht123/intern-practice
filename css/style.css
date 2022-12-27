@@ -13,6 +13,14 @@
     box-sizing: border-box;
 }
 
+html, body{
+    height: 100%;
+}
+
+body{
+    font-size: 14px;
+}
+
 .w-100{
     width: 100%;
 }
@@ -63,13 +71,9 @@ a{
     max-width: 1000px !important;
     padding: 20px;
     background: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin-top: 40px;
+    margin: 40px auto;
     z-index: 9999 !important;
-    display: none;
+    display: block;
 }
 
 .form-control{
@@ -188,7 +192,7 @@ table, td, th {
     margin-inline: auto;
 }
 
-.table{
+.table, .table2{
     display: table;
     border-spacing: 2px;
     border-collapse: collapse;
@@ -258,4 +262,22 @@ footer {
     font-weight: 600;
     font-size: 20px;
     letter-spacing: 5px;
+}
+
+#txtSearch{
+    font-size: 14px;
+    padding: 5px;
+    width: 400px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.btn-search{
+    background-color: var(--success-color);
+    margin:0;
+    border-radius: 0 5px 5px 0;
+}
+
+.table2{
+    display: none;
 }

@@ -172,20 +172,12 @@ $(function () {
 
     $(".modal-overlay").click(function () {
         $(".modal").css("display", "none")
-        $(".form").css("display", "none")
         $(".modal-confirm-remove").css("display", "none")
-    })
-
-    $(".btn-add").click(function (e) {
-        e.preventDefault()
-        $(".modal").css("display", "block")
-        $(".form").css("display", "block")
     })
 
     $(".btn-cancel").click(function (e) {
         e.preventDefault()
         $(".modal").css("display", "none")
-        $(".form").css("display", "none")
         $(".modal-confirm-remove").css("display", "none")
     })
 
@@ -254,16 +246,24 @@ $(function () {
             skills
             })
         updateIndex();
-        $(".modal").css("display", "none")
-        $(".form").css("display", "none")
         resetData()
     })
 
-    $('#chkAllBox').click(function () {
-        if (!$('#chkAllBox').prop('checked')) {
-            $('input[name="chkItem"').prop('checked', false)
+    $
+
+    $(".table").on('change', 'input[name="chkItem"]', function () {
+        if ($('input[name="chkItem"]:checked').length == $('input[name="chkItem"]').length) {
+            $("#chkAllBox").prop("checked", true)
         } else {
-            $('input[name="chkItem"').prop('checked', true)
+            $("#chkAllBox").prop("checked", false)
+        }
+    })
+
+    $('#chkAllBox').change(function () {
+        if ($(this).prop('checked')) {
+            $('input[name="chkItem"]').prop('checked', true)
+        } else {
+            $('input[name="chkItem"]').prop('checked', false)
         }
     })
 
@@ -281,14 +281,12 @@ $(function () {
     $(".btn-return").click(function (e) {
         e.preventDefault()
         $(".modal").css("display", "none")
-        $(".form").css("display", "none")
         $(".modal-confirm-remove").css("display", "none")
     })
 
     $(".btn-confirm-remove").click(function () {
         $('#item-' + id).remove()
         $(".modal").css("display", "none")
-        $(".form").css("display", "none")
         $(".modal-confirm-remove").css("display", "none")
     })
 
@@ -296,4 +294,38 @@ $(function () {
         $("input[name='chkItem']:checked").parents('tr').remove()
         $('#chkAllBox').prop("checked", false)
     })
-});
+
+    $(".btn-search").click(function () {
+        $('#tbody2').empty()
+        $(".table2").css("display", "table")
+        var searchString = $('#txtSearch').val().toLowerCase()
+
+        var searchResult = data.filter(item => {
+            return item.name.toLowerCase().includes(searchString) ||
+                item.email.toLowerCase().includes(searchString)
+        })
+
+        $.map(searchResult, function (value, key) {
+            let skillsString = ''
+            value.skills.map(item => skillsString += (item + ", "))
+            let tr = `
+            <tr id="item-${value.id}">
+                <td scope = "row" class="index"></td>
+                <td>${value.name}</td>
+                <td>${value.email}</td>
+                <td>${value.gender}</td>
+                <td>${value.dob}</td>
+                <td>${value.address}</td>
+                <td>${value.phone}</td>
+                <td>${value.major}</td>
+                <td>${skillsString}</td>
+                <td>${value.info}</td>
+            </tr>
+            `;
+
+            $("#tbody2").append(tr)
+            updateIndex()
+        })
+    })
+
+})
